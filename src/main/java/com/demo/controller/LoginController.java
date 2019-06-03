@@ -63,14 +63,4 @@ public class LoginController {
 			return jsonResult;
 		}
 	}
-	/**
-	 * Logout登出
-	 * @return
-	 */
-	@RequestMapping("doLogout")
-	public String doLogout() {
-		Subject currentUser = SecurityUtils.getSubject();
-		currentUser.logout();
-		return "login";
-	}
 }
